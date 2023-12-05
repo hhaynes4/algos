@@ -35,14 +35,8 @@ var threeSum = function (nums) {
       while (mid < right) {
         let currentTotal = sortedArr[left] + sortedArr[mid] + sortedArr[right];
         if (currentTotal < 0) {
-          //   while (sortedArr[mid] === sortedArr[mid + 1]) {
-          //     mid++;
-          //   }
           mid++;
         } else if (currentTotal > 0) {
-          //   while (sortedArr[right] === sortedArr[right - 1]) {
-          //     right--;
-          //   }
           right--;
         } else {
           // add combo!
@@ -70,6 +64,3 @@ console.log(threeSum([-2, 0, 0, 2, 2])); //[[-1,-1,2],[-1,0,1]]
  * Review:
  * time complexity of O(n)^3 and linear space complexity
  */
-
-console.log(Math.floor(Number(eval(["2","/","4"].join(' ')))).toString())
-console.log(Number(eval(["2","/","4"].join(' '))))

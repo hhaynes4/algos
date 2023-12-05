@@ -13,7 +13,7 @@ if a dog's suggestion includes "HAT" return that dog's name
 otherwise, enqueue their suggestions, excluding dogs that have already been asked
  * Code:
  */
-['false'];
+
 function findHat(dogs, startingDog) {
   const queue = [startingDog];
   const set = new Set();
@@ -22,7 +22,6 @@ function findHat(dogs, startingDog) {
     let current = queue.shift();
     // if the current dog has seen the hat, return that dog
     if (dogs[current].some((el) => el === 'HAT')) {
-      console.log(current);
       return current;
     } else {
       // check to see if we have seen the dog before, if not add it to the queue

@@ -19,7 +19,6 @@ function shiftRowLeft(row) {
   return resultsWithoutZeros.concat(zeros);
 }
 
-console.log(shiftRowLeft([0, 0, 4, 0, 4, 8, 8])); // [8,16,0,0,0,0,0]
-console.log(shiftRowLeft([0, 0, 0, 0, 0, 0, 0])); // 7 zeros
-console.log(shiftRowLeft([2, 2, 2, 2, 2, 2, 2]));
-
+console.log(shiftRowLeft([0, 0, 4, 0, 4, 8, 8])); // [8, 16, 0, 0, 0, 0, 0]
+console.log(shiftRowLeft([0, 0, 0, 0, 0, 0, 0])); // [0, 0, 0, 0, 0, 0, 0]
+console.log(shiftRowLeft([2, 2, 2, 2, 2, 2, 2])); // [4, 4, 4, 2, 0, 0, 0]

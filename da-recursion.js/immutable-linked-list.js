@@ -1,6 +1,5 @@
 // Print Immutable Linked List in Reverse (Easy - 15 Minutes)
 
-
 /**
  * Problem Analysis:
 goal: Print elements of an immutable linked list in reverse.
@@ -14,26 +13,29 @@ Recursion: Serves as an implicit stack to reverse the print order.
 * Code:
  */
 class ListNode {
-    constructor(value = 0, next = null) {
-        this.value = value;
-        this.next = next;
-    }
+  constructor(value = 0, next = null) {
+    this.value = value;
+    this.next = next;
+  }
 }
 
 function printLinkedListInReverse(head) {
-    // base case: if head does not exist
-    if (head == null) {
-        return;
-    }
-    printLinkedListInReverse(head.next)
-    // the unwinding phase of recursion
-    console.log(head.value)
+  // base case: if head does not exist
+  if (head == null) {
+    return;
+  }
+  printLinkedListInReverse(head.next);
+  // the unwinding phase of recursion
+  console.log(head.value);
 }
 
 // Execution
-const list = new ListNode(1, new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5)))))
+const list = new ListNode(
+  1,
+  new ListNode(2, new ListNode(3, new ListNode(4, new ListNode(5))))
+);
 
-printLinkedListInReverse(list)
+printLinkedListInReverse(list);
 // Review
 // Time Complexity: O(n), where n is the number of nodes (due to single traversal).
 // Space Complexity: O(n), as the recursion stack will have a maximum of n frames.
